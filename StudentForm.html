@@ -13,32 +13,32 @@
 
                 <div class="slds-grid slds-gutters slds-m-around_x-small">
                     <div class="slds-col">
-                        <lightning-input label="Student Name" value={studentName} onchange={handleStudendNameChange}></lightning-input>
+                        <lightning-input label="Student Name" value={studentName} onchange={handleStudendNameChange} required></lightning-input>
                     </div>
                     <div class="slds-col">
                         <lightning-combobox label="Gender" options={GenderOptions} 
-                        value={GenderValues} onchange={GenderOptionChange}></lightning-combobox>
+                        value={GenderValues} onchange={GenderOptionChange}  required></lightning-combobox>
                     </div>
                     <div class="slds-col">
                         <lightning-input type="date" label="Date fo Barth" value={dateOfBarthValue} 
-                        onchange={dateOfBarthChange} format="dd/MM/yyyy"></lightning-input>
+                        onchange={dateOfBarthChange} format="dd/MM/yyyy"  required></lightning-input>
                     </div>
                 </div>
                 <div class="slds-grid slds-gutters slds-m-around_x-small">
                     <div class="slds-col">
-                        <lightning-input label="Student Email" value={studentEmailValue} onchange={handleStudendEmailChange}></lightning-input>
+                        <lightning-input label="Student Email" value={studentEmailValue} onchange={handleStudendEmailChange}  required></lightning-input>
                     </div>
                     <div class="slds-col">
-                        <lightning-input label="Student Mobile" value={studentMobileValue} onchange={handleStudendMobileChange}></lightning-input>
+                        <lightning-input label="Student Mobile" value={studentMobileValue} onchange={handleStudendMobileChange}  required></lightning-input>
                     </div>
                 </div>
 
                 <div class="slds-grid slds-gutters slds-m-around_x-small">
                     <div class="slds-col">
-                        <lightning-input label="Persentage of 10th " value={PersentageTENValue} onchange={PersentageTENChange}></lightning-input>
+                        <lightning-input label="Persentage of 10th " value={PersentageTENValue} onchange={PersentageTENChange}  required></lightning-input>
                     </div>
                     <div class="slds-col">
-                        <lightning-input label="Persentage of 12th" value={PersentageTwelveValue} onchange={PersentageTwelveChange}></lightning-input>
+                        <lightning-input label="Persentage of 12th" value={PersentageTwelveValue} onchange={PersentageTwelveChange}  required></lightning-input>
                     </div>
                 </div>        
            
@@ -46,7 +46,7 @@
                 <div class="slds-grid slds-grid_vertical slds-m-around_x-small">
                     <div class="slds-col">
                         <lightning-combobox label="Department" options={DepartmentOptions} 
-                        value={DepartmentValues} onchange={DepartmentOptionChange} class="slds-m-around_x-small"></lightning-combobox>
+                        value={DepartmentValues} onchange={DepartmentOptionChange} class="slds-m-around_x-small" required></lightning-combobox>
                     </div>
                     
                  </div>
@@ -81,13 +81,8 @@
                 <div class="slds-col">
                     <lightning-input label="Emergency Contact Relation" value={RelationValue} onchange={RelationChange}></lightning-input>
                 </div>
-                </div>
-
-           
-           
-
-            
-           
+            </div>
+        
           </lightning-card>
             <!-- StudentFormData -->
 
@@ -103,16 +98,16 @@
 
                 <div class="slds-grid slds-gutters slds-m-around_x-small">
                     <div class="slds-col">
-                        <lightning-input label="Institution Name" value={InstitutionName} onchange={handleInstitutionNameChange}></lightning-input>
+                        <lightning-input label="Institution Name" value={InstitutionName} onchange={handleInstitutionNameChange} required></lightning-input>
                     </div>
                     <div class="slds-col">
-                        <lightning-input label="Student cGPA" value={cGPA} onchange={handlecGPAChange}></lightning-input>
+                        <lightning-input label="Student cGPA" value={cGPA} onchange={handlecGPAChange} required></lightning-input>
                     </div>
                     <div class="slds-col">
-                        <lightning-input type="date" label="Start Date" value={startdate} onchange={startdateChange} format="dd/MM/yyyy"></lightning-input>
+                        <lightning-input type="date" label="Start Date" value={startdate} onchange={startdateChange} format="dd/MM/yyyy" required></lightning-input>
                     </div>
                     <div class="slds-col">
-                        <lightning-input type="date" label="End Date" value={enddate} onchange={enddateChange} format="dd/MM/yyyy"></lightning-input>
+                        <lightning-input type="date" label="End Date" value={enddate} onchange={enddateChange} format="dd/MM/yyyy" required></lightning-input>
                     </div>
                     
                 </div>
@@ -123,7 +118,7 @@
                     </div>
                     <div class="slds-col">
                         <lightning-combobox label="Degree" options={degreeOptions} 
-                        value={degreeValues} onchange={degreeOptionChange}></lightning-combobox>
+                        value={degreeValues} onchange={degreeOptionChange} required></lightning-combobox>
                     </div>
                   </div>  
               
@@ -138,10 +133,10 @@
                   </div>
 
                 <lightning-input label="Desired Program Name" 
-                 value={DesiredProgramNameValuse} onchange={DesiredProgramNameChange}></lightning-input>
+                 value={DesiredProgramNameValuse} onchange={DesiredProgramNameChange} required></lightning-input>
 
                     <lightning-combobox label="Course Name" options={CourseNameOptions} 
-                        value={CourseNameValues} onchange={CourseNameChange}>
+                        value={CourseNameValues} onchange={CourseNameChange} required>
                     </lightning-combobox>
                      <!-- 
                     <lightning-combobox label="Status" options={StatusOptions} 
