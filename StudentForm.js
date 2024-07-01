@@ -1,5 +1,7 @@
 import { LightningElement,track } from 'lwc';
 import { createRecord } from 'lightning/uiRecordApi';
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+
 import STUDENT_OBJECT from '@salesforce/schema/Student__c';
 import ACADEMIC_OBJECT from '@salesforce/schema/Academic_Record__c';
 import DESIRED_PROGRAMS from '@salesforce/schema/Desired_Program__c';
@@ -301,5 +303,15 @@ export default class StudentForm3 extends LightningElement {
             console.error('Error saving records', error);
             // Handle error appropriately (show error message, log, etc.)
         }
+
+        // Toast Event
+
+        const event = new ShowToastEvent({
+            title: 'Thank You',
+            message: 'Records saved successfully',
+            variant: 'success', // or 'error', 'warning', 'info'
+        });
+        this.dispatchEvent(event);
+        
     }
 }
