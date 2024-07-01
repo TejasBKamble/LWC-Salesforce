@@ -1,0 +1,163 @@
+<template>
+    <lightning-card title="Student Registration Form " icon-name="standard:contact" class="slds-align_absolute-center slds-m-top_small">
+        <div class="slds-p-around_medium">
+            <!-- <h1 class="slds-align_absolute-center slds-m-top_small" >Student Registration Form</h1> -->
+            <!-- <div class="slds-align_absolute-center slds-m-top_small t(sizeLarge) ">Student Registration Form</div>
+
+            <label class="slds-form-element__label slds-align_absolute-center slds-m-top_small t(sizeLarge)" for="unique-id-of-input">Form label</label> -->
+            <!-- StudentFormData -->
+             <lightning-card>
+                <div class="demo-only" style="padding:0.5rem;background:#16325c">
+                    <div class="slds-text-color_inverse slds-text-body_regular">STUDENT INFORMATION.</div>
+                  </div>
+
+                <div class="slds-grid slds-gutters slds-m-around_x-small">
+                    <div class="slds-col">
+                        <lightning-input label="Student Name" value={studentName} onchange={handleStudendNameChange}></lightning-input>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-combobox label="Gender" options={GenderOptions} 
+                        value={GenderValues} onchange={GenderOptionChange}></lightning-combobox>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-input type="date" label="Date fo Barth" value={dateOfBarthValue} 
+                        onchange={dateOfBarthChange} format="dd/MM/yyyy"></lightning-input>
+                    </div>
+                </div>
+                <div class="slds-grid slds-gutters slds-m-around_x-small">
+                    <div class="slds-col">
+                        <lightning-input label="Student Email" value={studentEmailValue} onchange={handleStudendEmailChange}></lightning-input>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-input label="Student Mobile" value={studentMobileValue} onchange={handleStudendMobileChange}></lightning-input>
+                    </div>
+                </div>
+
+                <div class="slds-grid slds-gutters slds-m-around_x-small">
+                    <div class="slds-col">
+                        <lightning-input label="Persentage of 10th " value={PersentageTENValue} onchange={PersentageTENChange}></lightning-input>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-input label="Persentage of 12th" value={PersentageTwelveValue} onchange={PersentageTwelveChange}></lightning-input>
+                    </div>
+                </div>        
+           
+  
+                <div class="slds-grid slds-grid_vertical slds-m-around_x-small">
+                    <div class="slds-col">
+                        <lightning-combobox label="Department" options={DepartmentOptions} 
+                        value={DepartmentValues} onchange={DepartmentOptionChange} class="slds-m-around_x-small"></lightning-combobox>
+                    </div>
+                    
+                 </div>
+
+
+
+            <div class="slds-grid slds-gutters slds-m-around_x-small">
+                <div class="slds-col">
+                    <lightning-input label="City" value={cityNameValue} onchange={cityNameChange}></lightning-input>
+                </div>
+                <div class="slds-col">
+                    <lightning-input label="Zip Code" value={zipCodeValue} onchange={zipCodeChange}></lightning-input>
+                </div>
+            </div>
+           
+            <div class="slds-grid slds-grid_vertical slds-m-around_x-small">
+                <div class="slds-col">
+                    <lightning-input label="Address" value={AddressValue} onchange={AddressChange} class="slds-m-around_x-small"></lightning-input>
+
+                </div>
+                
+             </div>
+
+           
+            <div class="slds-grid slds-gutters slds-m-around_x-small">
+                <div class="slds-col">
+                    <lightning-input label="Emergency Contact Name" value={EmergencyContactNameValue} onchange={EmergencyContactNameChange}></lightning-input>
+                </div>
+                <div class="slds-col">
+                    <lightning-input label="Emergency Contact Phone" value={EmergencyPhoneValue} onchange={EmergencyPhoneChange}></lightning-input>
+                </div>
+                <div class="slds-col">
+                    <lightning-input label="Emergency Contact Relation" value={RelationValue} onchange={RelationChange}></lightning-input>
+                </div>
+                </div>
+
+           
+           
+
+            
+           
+          </lightning-card>
+            <!-- StudentFormData -->
+
+
+            
+            <!-- AcademicFormData -->
+            
+            <lightning-card>
+                <!-- <div class="slds-text-align_center">Academic Details.</div> -->
+                <div class="demo-only" style="padding:0.5rem;background:#16325c">
+                    <div class="slds-text-color_inverse slds-text-body_regular">ACADEMIC DETAILS.</div>
+                  </div>
+
+                <div class="slds-grid slds-gutters slds-m-around_x-small">
+                    <div class="slds-col">
+                        <lightning-input label="Institution Name" value={InstitutionName} onchange={handleInstitutionNameChange}></lightning-input>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-input label="Student cGPA" value={cGPA} onchange={handlecGPAChange}></lightning-input>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-input type="date" label="Start Date" value={startdate} onchange={startdateChange} format="dd/MM/yyyy"></lightning-input>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-input type="date" label="End Date" value={enddate} onchange={enddateChange} format="dd/MM/yyyy"></lightning-input>
+                    </div>
+                    
+                </div>
+                <div class="slds-grid slds-gutters slds-m-around_x-small">
+                    <div class="slds-col">
+                        <lightning-combobox label="Courses Completed" options={courseOptions} 
+                        value={courseType} onchange={coursrOptionChange}></lightning-combobox>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-combobox label="Degree" options={degreeOptions} 
+                        value={degreeValues} onchange={degreeOptionChange}></lightning-combobox>
+                    </div>
+                  </div>  
+              
+            </lightning-card>
+           
+           <!-- AcademicFormData -->
+
+           <!-- Desired Program -->
+            <lightning-card>
+                <div class="demo-only" style="padding:0.5rem;background:#16325c">
+                    <div class="slds-text-color_inverse slds-text-body_regular">DESIRED PROGRAMS.</div>
+                  </div>
+
+                <lightning-input label="Desired Program Name" 
+                 value={DesiredProgramNameValuse} onchange={DesiredProgramNameChange}></lightning-input>
+
+                    <lightning-combobox label="Course Name" options={CourseNameOptions} 
+                        value={CourseNameValues} onchange={CourseNameChange}>
+                    </lightning-combobox>
+                     <!-- 
+                    <lightning-combobox label="Status" options={StatusOptions} 
+                    value={StatusValues} onchange={StatusOptionChange}></lightning-combobox> -->
+                
+            </lightning-card>
+
+           
+
+           <!-- Desired Program -->
+
+
+            <!-- <div class="slds-m-top_medium slds-align_center">
+                <lightning-button label="Save" value="brand" onclick={handleSave}></lightning-button>
+            </div> -->
+            <button class="slds-button slds-button_brand slds-align_absolute-center slds-m-top_medium" onclick={handleSave}>Register Now</button>
+        </div>
+    </lightning-card>
+</template>
