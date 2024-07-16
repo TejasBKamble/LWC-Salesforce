@@ -1,0 +1,37 @@
+:host()
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-input {
+    width: 30%; /* Adjust width as needed */
+    --sds-c-input-border-radius: 20px; /* Custom property to set border-radius */
+    --sds-c-input-border: 1px solid #cccccc; /* Optional: Custom property to set border color */
+    --sds-c-input-border-focus: 1px solid #0070f3; /* Optional: Custom property to set border color on focus */
+    --sds-c-input-border-radius-focus: 20px; /* Optional: Custom property to set border-radius on focus */
+    --sds-c-input-padding-horizontal: 12px; /* Optional: Custom property to set horizontal padding */
+    --sds-c-input-padding-vertical: 8px; /* Optional: Custom property to set vertical padding */
+    --sds-c-text-color: #333333; /* Optional: Custom property to set text color */
+
+    margin-bottom: 20px;
+}
+
+.customCLS{
+    --slds-c-card-color-background: rgb(255, 180, 118);
+    --slds-c-card-heading-font-size: 20px;
+
+    --slds-c-card-sizing-border: 5px;
+    --slds-c-card-heading-font-weight: 100;
+    /* color: lightsalmon;
+    font: size 25px; ;
+    font-family: cursive; */
+}
+
+
+lightning-card div {
+    background: rgb(253, 253, 253);
+  }
+
+  
+
