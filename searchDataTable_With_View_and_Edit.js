@@ -22,30 +22,29 @@ export default class SearchDataTableStudent extends NavigationMixin(LightningEle
     columns=col;
     searchValue;
     displayResult;
+
+    connectedCallback() {
+        // Load all records initially
+        this.ImperativeCall('');
+    }
+
     handelSearch(event){
-        console.log("Handel Search RUN");
-        this.searchValue=event.target.value;
-        this.ImperativeCall();
+       console.log("Handel Search RUN");
+        this.searchValue = event.target.value;
+        this.ImperativeCall(this.searchValue);
     }
 
-    ImperativeCall(){
-
-        getData({str:this.searchValue})
-        .then((result)=>{
-            console.log('Result ',result);
-            this.displayResult=result;
-
-        })
-        .catch((error)=>{
-            console.log('Error Occured in Search',error);
-        })
-
+    ImperativeCall(searchStr) 
+    {
+        getData({ str: searchStr })
+            .then((result) => {
+                console.log('Result ', result);
+                this.displayResult = result;
+            })
+            .catch((error) => {
+                console.log('Error Occurred in Search', error);
+            });
     }
-
-    // handelRowAction(event){
-    //     const actionName=event.detail.action;
-    //     console.log('Event Action ',actionName);
-    // }
 
     handleRowAction(event) {
         console.log('Row Action triggered');
