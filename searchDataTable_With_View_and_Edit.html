@@ -1,0 +1,18 @@
+<template>
+<lightning-card title="Student Data Table With View Edit" class="customCLS">
+
+    <div class="container">
+       
+        <lightning-input type="text" placeholder="Enter Search Value ." onchange={handelSearch} class="custom-input"></lightning-input>
+    </div>
+  
+
+    <lightning-datatable key-field="id"
+        data={displayResult}
+        columns={columns}
+        onrowaction={handleRowAction}
+    >
+    </lightning-datatable>
+</lightning-card>
+</template>
+
