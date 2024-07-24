@@ -1,0 +1,19 @@
+<template>
+    <div class="input-container">
+        <input type="search"
+               placeholder="Search..."
+               onfocus={handleFocus}
+               onblur={handleBlur}
+               onchange={handleInputChange}
+               value={searchTerm}
+               aria-label="Search"
+               >
+        <button type="submit" onclick={handleSearch}>
+            Search
+        </button>
+    </div>
+    <!-- <div class="container">
+       
+        <lightning-input type="text" placeholder="Enter Search Value ." onchange={handelSearch} class="custom-input"></lightning-input>
+    </div> -->
+</template>
