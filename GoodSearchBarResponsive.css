@@ -1,0 +1,85 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Style for the search input */
+.input-container {
+    position: relative;
+    width: 100%; /* Full width of the parent container */
+    max-width: 600px; /* Maximum width of the search bar */
+    margin: 0 auto; /* Center align the search bar horizontally */
+}
+
+.input-container input[type="search"] {
+    width: calc(100% - 90px); /* Adjust width to accommodate the button */
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 25px; /* Adjust the border-radius for rounded corners */
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input-container input[type="search"]:focus {
+    outline: none;
+    border-color: #0070d2; /* Change border color on focus */
+}
+
+/* Style for the search button */
+.input-container button[type="submit"] {
+
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    background-color: #0070d2; /* Button background color */
+    color: #fff; /* Button text color */
+    border-radius: 25px; /* Adjust the border-radius to match input */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    /* Adjust button size and position on smaller screens */
+    font-size: 14px;
+}
+
+/* Style for the search button on hover */
+.input-container button[type="submit"]:hover {
+    background-color: #005ea2; /* Darker shade of button color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .input-container {
+        width: 100%;
+        margin: 0; /* Remove horizontal margin on smaller screens */
+    }
+
+    .input-container input[type="search"] {
+        width: calc(100% - 60px); /* Adjust width to accommodate button */
+        padding: 8px 12px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .input-container button[type="submit"] {
+        width: 50px; /* Fixed width for button on smaller screens */
+        padding: 8px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .input-container input[type="search"] {
+        width: calc(100% - 50px); /* Further adjustment for very small screens */
+        padding: 6px 10px;
+        font-size: 12px; /* Smaller font size for very small screens */
+    }
+
+    .input-container button[type="submit"] {
+        width: 40px; /* Smaller button size on very small screens */
+        padding: 6px;
+        font-size: 12px; /* Smaller font size for very small screens */
+    }
+}
